@@ -47,7 +47,9 @@ jobs:
       with:
         channel: 'stable' # 'dev', 'alpha', default to: 'stable'
     - run: flutter pub get
+      working-directory: ./generated
     - run: flutter pub run build_runner build
+      working-directory: ./generated
     - name: Add and push
       uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
       with:
