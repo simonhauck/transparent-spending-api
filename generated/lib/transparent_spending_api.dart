@@ -23,7 +23,3 @@ export 'package:transparent_spending_api/src/model/personal_information_dto.dart
 export 'package:transparent_spending_api/src/model/requisition_config_dto.dart';
 export 'package:transparent_spending_api/src/model/requisition_data_dto.dart';
 export 'package:transparent_spending_api/src/model/user_data_dto.dart';
-export 'package:transparent_spending_api/src/model/user_not_found_exception.dart';
-export 'package:transparent_spending_api/src/model/user_not_found_exception_cause.dart';
-export 'package:transparent_spending_api/src/model/user_not_found_exception_cause_stack_trace.dart';
-export 'package:transparent_spending_api/src/model/user_not_found_exception_cause_suppressed.dart';

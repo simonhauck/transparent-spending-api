@@ -51,7 +51,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getCurrentUser**
-> getCurrentUser()
+> UserDataDto getCurrentUser()
 
 
 
@@ -62,7 +62,8 @@ import 'package:transparent_spending_api/api.dart';
 final api = TransparentSpendingApi().getAdministrationControllerApi();
 
 try {
-    api.getCurrentUser();
+    final response = api.getCurrentUser();
+    print(response);
 } catch on DioError (e) {
     print('Exception when calling AdministrationControllerApi->getCurrentUser: $e\n');
 }
@@ -73,7 +74,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**UserDataDto**](UserDataDto.md)
 
 ### Authorization
 

@@ -9,7 +9,6 @@ import 'package:dio/dio.dart';
 
 import 'package:transparent_spending_api/src/model/base_exception_response.dart';
 import 'package:transparent_spending_api/src/model/user_data_dto.dart';
-import 'package:transparent_spending_api/src/model/user_not_found_exception.dart';
 
 class AdministrationControllerApi {
 
@@ -104,9 +103,9 @@ class AdministrationControllerApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [UserDataDto] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> getCurrentUser({ 
+  Future<Response<UserDataDto>> getCurrentUser({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -137,7 +136,34 @@ class AdministrationControllerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    UserDataDto _responseData;
+
+    try {
+      const _responseType = FullType(UserDataDto);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as UserDataDto;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<UserDataDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
 }

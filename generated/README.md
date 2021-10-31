@@ -84,10 +84,6 @@ Class | Method | HTTP request | Description
  - [RequisitionConfigDto](doc/RequisitionConfigDto.md)
  - [RequisitionDataDto](doc/RequisitionDataDto.md)
  - [UserDataDto](doc/UserDataDto.md)
- - [UserNotFoundException](doc/UserNotFoundException.md)
- - [UserNotFoundExceptionCause](doc/UserNotFoundExceptionCause.md)
- - [UserNotFoundExceptionCauseStackTrace](doc/UserNotFoundExceptionCauseStackTrace.md)
- - [UserNotFoundExceptionCauseSuppressed](doc/UserNotFoundExceptionCauseSuppressed.md)
 
 
 ## Documentation For Authorization
