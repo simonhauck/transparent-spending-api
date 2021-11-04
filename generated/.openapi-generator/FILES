@@ -3,12 +3,12 @@ README.md
 analysis_options.yaml
 doc/AdministrationControllerApi.md
 doc/BankAccountDto.md
-doc/BankInformationDto.md
-doc/BankInformationDtos.md
 doc/BankingAccountDto.md
 doc/BaseExceptionResponse.md
 doc/CountryInformationDto.md
 doc/CountryInformationDtos.md
+doc/InstitutionDto.md
+doc/InstitutionDtos.md
 doc/PersonalInformationDto.md
 doc/RegistrationControllerApi.md
 doc/RequisitionConfigDto.md
@@ -25,13 +25,13 @@ lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/bank_account_dto.dart
-lib/src/model/bank_information_dto.dart
-lib/src/model/bank_information_dtos.dart
 lib/src/model/banking_account_dto.dart
 lib/src/model/base_exception_response.dart
 lib/src/model/country_information_dto.dart
 lib/src/model/country_information_dtos.dart
 lib/src/model/date.dart
+lib/src/model/institution_dto.dart
+lib/src/model/institution_dtos.dart
 lib/src/model/personal_information_dto.dart
 lib/src/model/requisition_config_dto.dart
 lib/src/model/requisition_data_dto.dart
@@ -39,3 +39,5 @@ lib/src/model/user_data_dto.dart
 lib/src/serializers.dart
 lib/transparent_spending_api.dart
 pubspec.yaml
+test/institution_dto_test.dart
+test/institution_dtos_test.dart

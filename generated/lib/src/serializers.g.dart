@@ -8,20 +8,17 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(BankAccountDto.serializer)
-      ..add(BankInformationDto.serializer)
-      ..add(BankInformationDtos.serializer)
       ..add(BankingAccountDto.serializer)
       ..add(BaseExceptionResponse.serializer)
       ..add(CountryInformationDto.serializer)
       ..add(CountryInformationDtos.serializer)
+      ..add(InstitutionDto.serializer)
+      ..add(InstitutionDtos.serializer)
       ..add(PersonalInformationDto.serializer)
       ..add(RequisitionConfigDto.serializer)
       ..add(RequisitionDataDto.serializer)
       ..add(RequisitionDataDtoStatusEnum.serializer)
       ..add(UserDataDto.serializer)
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BankInformationDto)]),
-          () => new ListBuilder<BankInformationDto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BankingAccountDto)]),
           () => new ListBuilder<BankingAccountDto>())
@@ -29,6 +26,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(CountryInformationDto)]),
           () => new ListBuilder<CountryInformationDto>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(InstitutionDto)]),
+          () => new ListBuilder<InstitutionDto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(RequisitionDataDto)]),
           () => new ListBuilder<RequisitionDataDto>())

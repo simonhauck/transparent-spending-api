@@ -13,12 +13,12 @@ import 'package:transparent_spending_api/src/date_serializer.dart';
 import 'package:transparent_spending_api/src/model/date.dart';
 
 import 'package:transparent_spending_api/src/model/bank_account_dto.dart';
-import 'package:transparent_spending_api/src/model/bank_information_dto.dart';
-import 'package:transparent_spending_api/src/model/bank_information_dtos.dart';
 import 'package:transparent_spending_api/src/model/banking_account_dto.dart';
 import 'package:transparent_spending_api/src/model/base_exception_response.dart';
 import 'package:transparent_spending_api/src/model/country_information_dto.dart';
 import 'package:transparent_spending_api/src/model/country_information_dtos.dart';
+import 'package:transparent_spending_api/src/model/institution_dto.dart';
+import 'package:transparent_spending_api/src/model/institution_dtos.dart';
 import 'package:transparent_spending_api/src/model/personal_information_dto.dart';
 import 'package:transparent_spending_api/src/model/requisition_config_dto.dart';
 import 'package:transparent_spending_api/src/model/requisition_data_dto.dart';
@@ -28,12 +28,12 @@ part 'serializers.g.dart';
 
 @SerializersFor([
   BankAccountDto,
-  BankInformationDto,
-  BankInformationDtos,
   BankingAccountDto,
   BaseExceptionResponse,
   CountryInformationDto,
   CountryInformationDtos,
+  InstitutionDto,
+  InstitutionDtos,
   PersonalInformationDto,
   RequisitionConfigDto,
   RequisitionDataDto,

@@ -8,10 +8,11 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
+import 'package:transparent_spending_api/src/api_util.dart';
 import 'package:transparent_spending_api/src/model/bank_account_dto.dart';
-import 'package:transparent_spending_api/src/model/bank_information_dtos.dart';
 import 'package:transparent_spending_api/src/model/base_exception_response.dart';
 import 'package:transparent_spending_api/src/model/country_information_dtos.dart';
+import 'package:transparent_spending_api/src/model/institution_dtos.dart';
 import 'package:transparent_spending_api/src/model/requisition_config_dto.dart';
 
 class RegistrationControllerApi {
@@ -43,7 +44,7 @@ class RegistrationControllerApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/sec/registration/bank/country';
+    final _path = r'/api/sec/registration/institution/country';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -96,10 +97,11 @@ class RegistrationControllerApi {
     );
   }
 
-  /// getBankingForCountryCode
+  /// getSupportedInstitutions
   /// 
   ///
   /// Parameters:
+  /// * [name] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -107,9 +109,10 @@ class RegistrationControllerApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BankInformationDtos] as data
+  /// Returns a [Future] containing a [Response] with a [InstitutionDtos] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BankInformationDtos>> getBankingForCountryCode({ 
+  Future<Response<InstitutionDtos>> getSupportedInstitutions({ 
+    String? name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -117,7 +120,7 @@ class RegistrationControllerApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/sec/registration/bank';
+    final _path = r'/api/sec/registration/institution';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -132,22 +135,27 @@ class RegistrationControllerApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (name != null) r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
     );
 
-    BankInformationDtos _responseData;
+    InstitutionDtos _responseData;
 
     try {
-      const _responseType = FullType(BankInformationDtos);
+      const _responseType = FullType(InstitutionDtos);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BankInformationDtos;
+      ) as InstitutionDtos;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -158,7 +166,7 @@ class RegistrationControllerApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BankInformationDtos>(
+    return Response<InstitutionDtos>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

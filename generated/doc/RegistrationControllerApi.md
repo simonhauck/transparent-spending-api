@@ -9,8 +9,8 @@ All URIs are relative to *https://server.transparent-spending.tk*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAvailableCountries**](RegistrationControllerApi.md#getavailablecountries) | **GET** /api/sec/registration/bank/country | 
-[**getBankingForCountryCode**](RegistrationControllerApi.md#getbankingforcountrycode) | **GET** /api/sec/registration/bank | 
+[**getAvailableCountries**](RegistrationControllerApi.md#getavailablecountries) | **GET** /api/sec/registration/institution/country | 
+[**getSupportedInstitutions**](RegistrationControllerApi.md#getsupportedinstitutions) | **GET** /api/sec/registration/institution | 
 [**importBankAccounts**](RegistrationControllerApi.md#importbankaccounts) | **GET** /api/sec/registration/bank/account | 
 [**startRequisition**](RegistrationControllerApi.md#startrequisition) | **POST** /api/sec/registration/bank/account | 
 
@@ -52,8 +52,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getBankingForCountryCode**
-> BankInformationDtos getBankingForCountryCode()
+# **getSupportedInstitutions**
+> InstitutionDtos getSupportedInstitutions(name)
 
 
 
@@ -62,21 +62,25 @@ No authorization required
 import 'package:transparent_spending_api/api.dart';
 
 final api = TransparentSpendingApi().getRegistrationControllerApi();
+final String name = name_example; // String | 
 
 try {
-    final response = api.getBankingForCountryCode();
+    final response = api.getSupportedInstitutions(name);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling RegistrationControllerApi->getBankingForCountryCode: $e\n');
+    print('Exception when calling RegistrationControllerApi->getSupportedInstitutions: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | [optional] 
 
 ### Return type
 
-[**BankInformationDtos**](BankInformationDtos.md)
+[**InstitutionDtos**](InstitutionDtos.md)
 
 ### Authorization
 

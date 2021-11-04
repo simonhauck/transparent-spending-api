@@ -65,8 +65,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*AdministrationControllerApi*](doc/AdministrationControllerApi.md) | [**createOrUpdateUser**](doc/AdministrationControllerApi.md#createorupdateuser) | **POST** /api/sec/administration/user | 
 [*AdministrationControllerApi*](doc/AdministrationControllerApi.md) | [**getCurrentUser**](doc/AdministrationControllerApi.md#getcurrentuser) | **GET** /api/sec/administration/user | 
-[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getAvailableCountries**](doc/RegistrationControllerApi.md#getavailablecountries) | **GET** /api/sec/registration/bank/country | 
-[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getBankingForCountryCode**](doc/RegistrationControllerApi.md#getbankingforcountrycode) | **GET** /api/sec/registration/bank | 
+[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getAvailableCountries**](doc/RegistrationControllerApi.md#getavailablecountries) | **GET** /api/sec/registration/institution/country | 
+[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getSupportedInstitutions**](doc/RegistrationControllerApi.md#getsupportedinstitutions) | **GET** /api/sec/registration/institution | 
 [*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**importBankAccounts**](doc/RegistrationControllerApi.md#importbankaccounts) | **GET** /api/sec/registration/bank/account | 
 [*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**startRequisition**](doc/RegistrationControllerApi.md#startrequisition) | **POST** /api/sec/registration/bank/account | 
 
@@ -74,12 +74,12 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BankAccountDto](doc/BankAccountDto.md)
- - [BankInformationDto](doc/BankInformationDto.md)
- - [BankInformationDtos](doc/BankInformationDtos.md)
  - [BankingAccountDto](doc/BankingAccountDto.md)
  - [BaseExceptionResponse](doc/BaseExceptionResponse.md)
  - [CountryInformationDto](doc/CountryInformationDto.md)
  - [CountryInformationDtos](doc/CountryInformationDtos.md)
+ - [InstitutionDto](doc/InstitutionDto.md)
+ - [InstitutionDtos](doc/InstitutionDtos.md)
  - [PersonalInformationDto](doc/PersonalInformationDto.md)
  - [RequisitionConfigDto](doc/RequisitionConfigDto.md)
  - [RequisitionDataDto](doc/RequisitionDataDto.md)
