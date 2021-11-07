@@ -65,25 +65,24 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*AdministrationControllerApi*](doc/AdministrationControllerApi.md) | [**createOrUpdateUser**](doc/AdministrationControllerApi.md#createorupdateuser) | **POST** /api/sec/administration/user | 
 [*AdministrationControllerApi*](doc/AdministrationControllerApi.md) | [**getCurrentUser**](doc/AdministrationControllerApi.md#getcurrentuser) | **GET** /api/sec/administration/user | 
+[*ImportAccountControllerApi*](doc/ImportAccountControllerApi.md) | [**importAccountByReference**](doc/ImportAccountControllerApi.md#importaccountbyreference) | **GET** /registration/import/success | 
+[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**createRequisition**](doc/RegistrationControllerApi.md#createrequisition) | **POST** /api/sec/registration/institution/requisition | 
 [*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getAvailableCountries**](doc/RegistrationControllerApi.md#getavailablecountries) | **GET** /api/sec/registration/institution/country | 
 [*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getSupportedInstitutions**](doc/RegistrationControllerApi.md#getsupportedinstitutions) | **GET** /api/sec/registration/institution | 
-[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**importBankAccounts**](doc/RegistrationControllerApi.md#importbankaccounts) | **GET** /api/sec/registration/bank/account | 
-[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**startRequisition**](doc/RegistrationControllerApi.md#startrequisition) | **POST** /api/sec/registration/bank/account | 
 
 
 ## Documentation For Models
 
- - [BankAccountDto](doc/BankAccountDto.md)
- - [BankingAccountDto](doc/BankingAccountDto.md)
  - [BaseExceptionResponse](doc/BaseExceptionResponse.md)
  - [CountryInformationDto](doc/CountryInformationDto.md)
  - [CountryInformationDtos](doc/CountryInformationDtos.md)
  - [InstitutionDto](doc/InstitutionDto.md)
  - [InstitutionDtos](doc/InstitutionDtos.md)
  - [PersonalInformationDto](doc/PersonalInformationDto.md)
- - [RequisitionConfigDto](doc/RequisitionConfigDto.md)
+ - [RequisitionConfigDto2](doc/RequisitionConfigDto2.md)
  - [RequisitionDataDto](doc/RequisitionDataDto.md)
  - [UserDataDto](doc/UserDataDto.md)
+ - [UserRequisitionDto](doc/UserRequisitionDto.md)
 
 
 ## Documentation For Authorization

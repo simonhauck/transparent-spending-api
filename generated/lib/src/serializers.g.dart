@@ -7,21 +7,17 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
-      ..add(BankAccountDto.serializer)
-      ..add(BankingAccountDto.serializer)
       ..add(BaseExceptionResponse.serializer)
       ..add(CountryInformationDto.serializer)
       ..add(CountryInformationDtos.serializer)
       ..add(InstitutionDto.serializer)
       ..add(InstitutionDtos.serializer)
       ..add(PersonalInformationDto.serializer)
-      ..add(RequisitionConfigDto.serializer)
+      ..add(RequisitionConfigDto2.serializer)
       ..add(RequisitionDataDto.serializer)
       ..add(RequisitionDataDtoStatusEnum.serializer)
       ..add(UserDataDto.serializer)
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(BankingAccountDto)]),
-          () => new ListBuilder<BankingAccountDto>())
+      ..add(UserRequisitionDto.serializer)
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(CountryInformationDto)]),
@@ -29,9 +25,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(InstitutionDto)]),
           () => new ListBuilder<InstitutionDto>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RequisitionDataDto)]),
-          () => new ListBuilder<RequisitionDataDto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

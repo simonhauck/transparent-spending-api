@@ -1,4 +1,4 @@
-# transparent_spending_api.model.UserDataDto
+# transparent_spending_api.model.UserRequisitionDto
 
 ## Load the model package
 ```dart
@@ -9,7 +9,10 @@ import 'package:transparent_spending_api/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**personalInformation** | [**PersonalInformationDto**](PersonalInformationDto.md) |  | 
+**openIdSub** | **String** |  | 
+**requisitionData** | [**RequisitionDataDto**](RequisitionDataDto.md) |  | 
+**institution** | [**InstitutionDto**](InstitutionDto.md) |  | 
+**requisitionConfig** | [**RequisitionConfigDto2**](RequisitionConfigDto2.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

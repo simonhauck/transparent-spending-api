@@ -2,9 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:built_collection/built_collection.dart';
 import 'package:transparent_spending_api/src/model/personal_information_dto.dart';
-import 'package:transparent_spending_api/src/model/banking_account_dto.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,16 +13,12 @@ part 'user_data_dto.g.dart';
 /// Properties:
 /// * [id] 
 /// * [personalInformation] 
-/// * [bankingAccounts] 
 abstract class UserDataDto implements Built<UserDataDto, UserDataDtoBuilder> {
     @BuiltValueField(wireName: r'id')
     String get id;
 
     @BuiltValueField(wireName: r'personalInformation')
     PersonalInformationDto get personalInformation;
-
-    @BuiltValueField(wireName: r'bankingAccounts')
-    BuiltList<BankingAccountDto> get bankingAccounts;
 
     UserDataDto._();
 
@@ -56,10 +50,6 @@ class _$UserDataDtoSerializer implements StructuredSerializer<UserDataDto> {
             ..add(r'personalInformation')
             ..add(serializers.serialize(object.personalInformation,
                 specifiedType: const FullType(PersonalInformationDto)));
-        result
-            ..add(r'bankingAccounts')
-            ..add(serializers.serialize(object.bankingAccounts,
-                specifiedType: const FullType(BuiltList, [FullType(BankingAccountDto)])));
         return result;
     }
 
@@ -84,11 +74,6 @@ class _$UserDataDtoSerializer implements StructuredSerializer<UserDataDto> {
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(PersonalInformationDto)) as PersonalInformationDto;
                     result.personalInformation.replace(valueDes);
-                    break;
-                case r'bankingAccounts':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(BankingAccountDto)])) as BuiltList<BankingAccountDto>;
-                    result.bankingAccounts.replace(valueDes);
                     break;
             }
         }

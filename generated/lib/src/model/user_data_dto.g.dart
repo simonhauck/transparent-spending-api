@@ -11,22 +11,15 @@ class _$UserDataDto extends UserDataDto {
   final String id;
   @override
   final PersonalInformationDto personalInformation;
-  @override
-  final BuiltList<BankingAccountDto> bankingAccounts;
 
   factory _$UserDataDto([void Function(UserDataDtoBuilder)? updates]) =>
       (new UserDataDtoBuilder()..update(updates)).build();
 
-  _$UserDataDto._(
-      {required this.id,
-      required this.personalInformation,
-      required this.bankingAccounts})
+  _$UserDataDto._({required this.id, required this.personalInformation})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, 'UserDataDto', 'id');
     BuiltValueNullFieldError.checkNotNull(
         personalInformation, 'UserDataDto', 'personalInformation');
-    BuiltValueNullFieldError.checkNotNull(
-        bankingAccounts, 'UserDataDto', 'bankingAccounts');
   }
 
   @override
@@ -41,22 +34,19 @@ class _$UserDataDto extends UserDataDto {
     if (identical(other, this)) return true;
     return other is UserDataDto &&
         id == other.id &&
-        personalInformation == other.personalInformation &&
-        bankingAccounts == other.bankingAccounts;
+        personalInformation == other.personalInformation;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, id.hashCode), personalInformation.hashCode),
-        bankingAccounts.hashCode));
+    return $jf($jc($jc(0, id.hashCode), personalInformation.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('UserDataDto')
           ..add('id', id)
-          ..add('personalInformation', personalInformation)
-          ..add('bankingAccounts', bankingAccounts))
+          ..add('personalInformation', personalInformation))
         .toString();
   }
 }
@@ -74,12 +64,6 @@ class UserDataDtoBuilder implements Builder<UserDataDto, UserDataDtoBuilder> {
   set personalInformation(PersonalInformationDtoBuilder? personalInformation) =>
       _$this._personalInformation = personalInformation;
 
-  ListBuilder<BankingAccountDto>? _bankingAccounts;
-  ListBuilder<BankingAccountDto> get bankingAccounts =>
-      _$this._bankingAccounts ??= new ListBuilder<BankingAccountDto>();
-  set bankingAccounts(ListBuilder<BankingAccountDto>? bankingAccounts) =>
-      _$this._bankingAccounts = bankingAccounts;
-
   UserDataDtoBuilder() {
     UserDataDto._defaults(this);
   }
@@ -89,7 +73,6 @@ class UserDataDtoBuilder implements Builder<UserDataDto, UserDataDtoBuilder> {
     if ($v != null) {
       _id = $v.id;
       _personalInformation = $v.personalInformation.toBuilder();
-      _bankingAccounts = $v.bankingAccounts.toBuilder();
       _$v = null;
     }
     return this;
@@ -114,15 +97,12 @@ class UserDataDtoBuilder implements Builder<UserDataDto, UserDataDtoBuilder> {
           new _$UserDataDto._(
               id: BuiltValueNullFieldError.checkNotNull(
                   id, 'UserDataDto', 'id'),
-              personalInformation: personalInformation.build(),
-              bankingAccounts: bankingAccounts.build());
+              personalInformation: personalInformation.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'personalInformation';
         personalInformation.build();
-        _$failedField = 'bankingAccounts';
-        bankingAccounts.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'UserDataDto', _$failedField, e.toString());
