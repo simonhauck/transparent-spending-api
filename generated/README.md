@@ -68,6 +68,7 @@ Class | Method | HTTP request | Description
 [*ImportAccountControllerApi*](doc/ImportAccountControllerApi.md) | [**importAccountByReference**](doc/ImportAccountControllerApi.md#importaccountbyreference) | **GET** /registration/import/success | 
 [*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**createRequisition**](doc/RegistrationControllerApi.md#createrequisition) | **POST** /api/sec/registration/institution/requisition | 
 [*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getAvailableCountries**](doc/RegistrationControllerApi.md#getavailablecountries) | **GET** /api/sec/registration/institution/country | 
+[*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getRequisitionByInstitution**](doc/RegistrationControllerApi.md#getrequisitionbyinstitution) | **GET** /api/sec/registration/institution/requisition/{institution} | 
 [*RegistrationControllerApi*](doc/RegistrationControllerApi.md) | [**getSupportedInstitutions**](doc/RegistrationControllerApi.md#getsupportedinstitutions) | **GET** /api/sec/registration/institution | 
 
 

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createRequisition**](RegistrationControllerApi.md#createrequisition) | **POST** /api/sec/registration/institution/requisition | 
 [**getAvailableCountries**](RegistrationControllerApi.md#getavailablecountries) | **GET** /api/sec/registration/institution/country | 
+[**getRequisitionByInstitution**](RegistrationControllerApi.md#getrequisitionbyinstitution) | **GET** /api/sec/registration/institution/requisition/{institution} | 
 [**getSupportedInstitutions**](RegistrationControllerApi.md#getsupportedinstitutions) | **GET** /api/sec/registration/institution | 
 
 
@@ -80,6 +81,47 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**CountryInformationDtos**](CountryInformationDtos.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getRequisitionByInstitution**
+> UserRequisitionDto getRequisitionByInstitution(institution)
+
+
+
+### Example
+```dart
+import 'package:transparent_spending_api/api.dart';
+
+final api = TransparentSpendingApi().getRegistrationControllerApi();
+final String institution = institution_example; // String | 
+
+try {
+    final response = api.getRequisitionByInstitution(institution);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling RegistrationControllerApi->getRequisitionByInstitution: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **institution** | **String**|  | 
+
+### Return type
+
+[**UserRequisitionDto**](UserRequisitionDto.md)
 
 ### Authorization
 
