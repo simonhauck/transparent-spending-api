@@ -7,6 +7,8 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(AccountDto.serializer)
+      ..add(AccountsDto.serializer)
       ..add(BaseExceptionResponse.serializer)
       ..add(CountryInformationDto.serializer)
       ..add(CountryInformationDtos.serializer)
@@ -18,6 +20,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequisitionDataDtoStatusEnum.serializer)
       ..add(UserDataDto.serializer)
       ..add(UserRequisitionDto.serializer)
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(AccountDto)]),
+          () => new ListBuilder<AccountDto>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(CountryInformationDto)]),

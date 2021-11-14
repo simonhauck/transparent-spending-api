@@ -1,6 +1,9 @@
 .gitignore
 README.md
 analysis_options.yaml
+doc/AccountControllerApi.md
+doc/AccountDto.md
+doc/AccountsDto.md
 doc/AdministrationControllerApi.md
 doc/BaseExceptionResponse.md
 doc/CountryInformationDto.md
@@ -15,6 +18,7 @@ doc/RequisitionDataDto.md
 doc/UserDataDto.md
 doc/UserRequisitionDto.md
 lib/src/api.dart
+lib/src/api/account_controller_api.dart
 lib/src/api/administration_controller_api.dart
 lib/src/api/import_account_controller_api.dart
 lib/src/api/registration_controller_api.dart
@@ -25,6 +29,8 @@ lib/src/auth/basic_auth.dart
 lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
+lib/src/model/account_dto.dart
+lib/src/model/accounts_dto.dart
 lib/src/model/base_exception_response.dart
 lib/src/model/country_information_dto.dart
 lib/src/model/country_information_dtos.dart
@@ -39,3 +45,6 @@ lib/src/model/user_requisition_dto.dart
 lib/src/serializers.dart
 lib/transparent_spending_api.dart
 pubspec.yaml
+test/account_controller_api_test.dart
+test/account_dto_test.dart
+test/accounts_dto_test.dart

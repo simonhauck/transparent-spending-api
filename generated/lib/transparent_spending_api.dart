@@ -9,10 +9,13 @@ export 'package:transparent_spending_api/src/auth/oauth.dart';
 export 'package:transparent_spending_api/src/serializers.dart';
 export 'package:transparent_spending_api/src/model/date.dart';
 
+export 'package:transparent_spending_api/src/api/account_controller_api.dart';
 export 'package:transparent_spending_api/src/api/administration_controller_api.dart';
 export 'package:transparent_spending_api/src/api/import_account_controller_api.dart';
 export 'package:transparent_spending_api/src/api/registration_controller_api.dart';
 
+export 'package:transparent_spending_api/src/model/account_dto.dart';
+export 'package:transparent_spending_api/src/model/accounts_dto.dart';
 export 'package:transparent_spending_api/src/model/base_exception_response.dart';
 export 'package:transparent_spending_api/src/model/country_information_dto.dart';
 export 'package:transparent_spending_api/src/model/country_information_dtos.dart';

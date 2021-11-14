@@ -46,13 +46,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:transparent_spending_api/transparent_spending_api.dart';
 
 
-final api = TransparentSpendingApi().getAdministrationControllerApi();
+final api = TransparentSpendingApi().getAccountControllerApi();
 
 try {
-    final response = await api.createOrUpdateUser();
+    final response = await api.getAccounts();
     print(response);
 } catch on DioError (e) {
-    print("Exception when calling AdministrationControllerApi->createOrUpdateUser: $e\n");
+    print("Exception when calling AccountControllerApi->getAccounts: $e\n");
 }
 
 ```
@@ -63,6 +63,7 @@ All URIs are relative to *https://server.transparent-spending.tk*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+[*AccountControllerApi*](doc/AccountControllerApi.md) | [**getAccounts**](doc/AccountControllerApi.md#getaccounts) | **GET** /api/sec/account | 
 [*AdministrationControllerApi*](doc/AdministrationControllerApi.md) | [**createOrUpdateUser**](doc/AdministrationControllerApi.md#createorupdateuser) | **POST** /api/sec/administration/user | 
 [*AdministrationControllerApi*](doc/AdministrationControllerApi.md) | [**getCurrentUser**](doc/AdministrationControllerApi.md#getcurrentuser) | **GET** /api/sec/administration/user | 
 [*ImportAccountControllerApi*](doc/ImportAccountControllerApi.md) | [**importAccountByReference**](doc/ImportAccountControllerApi.md#importaccountbyreference) | **GET** /registration/import/success | 
@@ -74,6 +75,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AccountDto](doc/AccountDto.md)
+ - [AccountsDto](doc/AccountsDto.md)
  - [BaseExceptionResponse](doc/BaseExceptionResponse.md)
  - [CountryInformationDto](doc/CountryInformationDto.md)
  - [CountryInformationDtos](doc/CountryInformationDtos.md)

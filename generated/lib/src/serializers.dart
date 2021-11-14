@@ -12,6 +12,8 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:transparent_spending_api/src/date_serializer.dart';
 import 'package:transparent_spending_api/src/model/date.dart';
 
+import 'package:transparent_spending_api/src/model/account_dto.dart';
+import 'package:transparent_spending_api/src/model/accounts_dto.dart';
 import 'package:transparent_spending_api/src/model/base_exception_response.dart';
 import 'package:transparent_spending_api/src/model/country_information_dto.dart';
 import 'package:transparent_spending_api/src/model/country_information_dtos.dart';
@@ -26,6 +28,8 @@ import 'package:transparent_spending_api/src/model/user_requisition_dto.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
+  AccountDto,
+  AccountsDto,
   BaseExceptionResponse,
   CountryInformationDto,
   CountryInformationDtos,
